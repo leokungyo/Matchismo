@@ -246,7 +246,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hs-Fk-jSp">
-                                <rect key="frame" x="20" y="464" width="560" height="21"/>
+                                <rect key="frame" x="20" y="518" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -257,19 +257,21 @@
                                     <rect key="frame" x="2" y="492" width="372" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xET-I6-48S">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69c-Eu-7mz">
+                                <rect key="frame" x="159" y="550" width="50" height="30"/>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="588" width="372" height="30"/>
-                                </variation>
                                 <connections>
-                                    <action selector="touchRestartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVU-zM-kr8"/>
+                                    <action selector="touchRestartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZE-Q8-nrT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-NB-pXy">
+                                <rect key="frame" x="20" y="473" width="328" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-co-zG4">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                 <segments>
@@ -284,37 +286,24 @@
                                     <action selector="segmentedControlIndexChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="sO4-JI-4CO"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZS-VB-MbZ">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="2" y="521" width="358" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="xET-I6-48S"/>
                                 <exclude reference="2qu-co-zG4"/>
-                                <exclude reference="QZS-VB-MbZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="xET-I6-48S"/>
                                 <include reference="2qu-co-zG4"/>
-                                <include reference="QZS-VB-MbZ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="cardMatchMode" destination="2qu-co-zG4" id="mZf-5h-8Yn"/>
-                        <outlet property="restartButton" destination="xET-I6-48S" id="eNm-2R-fU8"/>
+                        <outlet property="restartButton" destination="69c-Eu-7mz" id="QOr-Sa-yoc"/>
                         <outlet property="scoreLabel" destination="1Hs-Fk-jSp" id="cXY-0B-NZL"/>
-                        <outlet property="userActivityLabel" destination="QZS-VB-MbZ" id="hbG-CZ-03k"/>
+                        <outlet property="userActivityLabel" destination="ubL-NB-pXy" id="AET-FO-0Bd"/>
                         <outletCollection property="cardButtons" destination="g88-7H-d7X" id="ufn-r1-oPk"/>
                         <outletCollection property="cardButtons" destination="32o-Mg-zKu" id="j86-kz-Tof"/>
                         <outletCollection property="cardButtons" destination="awk-tp-S9Q" id="OKN-mD-Qf3"/>
@@ -331,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25.5" y="276.75"/>
+            <point key="canvasLocation" x="25" y="276"/>
         </scene>
     </scenes>
     <resources>
