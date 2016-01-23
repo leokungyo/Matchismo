@@ -59,7 +59,7 @@ static const int COST_TO_CHOOSE = 1;
 -(void)chooseCardAtIndex:(NSUInteger)index{
 
     Card *card = [self cardAtIndex:index];
-    NSMutableArray *otherCards = [[NSMutableArray alloc]init];
+    //NSMutableArray *otherCards = [[NSMutableArray alloc]init];
     if(self.gameMode == 0){
         //2-card match mode
         if (!card.isMatched) {
@@ -67,6 +67,7 @@ static const int COST_TO_CHOOSE = 1;
                 card.chosen = NO;
             }else{
                 //match against other chosen cards
+                self.userActivity = [NSString stringWithFormat:@"%@",card.contents];
                 for (Card *otherCard in self.cards) {
                     if (otherCard.isChosen && !otherCard.isMatched) {
                         int matchScore = [card match:@[otherCard]];
@@ -87,7 +88,7 @@ static const int COST_TO_CHOOSE = 1;
                 }
             
             self.score -= COST_TO_CHOOSE;
-            self.userActivity = [NSString stringWithFormat:@"%@",card.contents];
+           // self.userActivity = [NSString stringWithFormat:@"%@",card.contents];
             card.chosen = YES;
             }
         }
