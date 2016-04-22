@@ -22,7 +22,8 @@
             score = 1;
         }
     }
-    
+    //delete the old 3-card match mode, alter to Set game
+    /*
     //3-card match mode
     if ([otherCards count] == 2) {
         PlayingCard *firstCard = [otherCards objectAtIndex:0];
@@ -76,7 +77,7 @@
             }
         }
     }
-    
+    */
     return score;
 }
 

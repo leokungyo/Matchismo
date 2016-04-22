@@ -24,20 +24,6 @@
 
 @implementation CardGameViewController
 
-
-- (IBAction)segmentedControlIndexChanged {
-    
-    if (self.cardMatchMode.selectedSegmentIndex == 0) {
-        self.gameMode = 0;
-    }
-    else if (self.cardMatchMode.selectedSegmentIndex == 1){
-        self.gameMode = 1;
-        
-    }
-}
-
-
-
 -(CardMatchingGame *)game{
 
     if (!_game) {

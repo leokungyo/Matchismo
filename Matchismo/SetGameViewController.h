@@ -6,8 +6,8 @@
 //  Copyright © 2016年 QingYu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface SetGameViewController : NSObject
+@interface SetGameViewController : UIViewController
 
 @end

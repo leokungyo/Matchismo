@@ -11,7 +11,6 @@
 
 @interface CardGameViewController : UIViewController
 
-@property  IBOutlet UISegmentedControl *cardMatchMode;
 
 @end
 

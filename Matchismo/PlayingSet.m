@@ -10,4 +10,23 @@
 
 @implementation PlayingSet
 
+-(NSString *)contents{
+
+    
+}
+
++(NSArray *)validSuits{
+    
+    return @[@"▲",@"▲▲",@"▲▲▲",@"●",@"●●",@"●●●",@"◼︎",@"◼︎◼︎",@"◼︎◼︎◼︎"];
+}
+
+
+
++(NSUInteger)maxRank{
+    
+    return 81;
+}
+
+
+
 @end
